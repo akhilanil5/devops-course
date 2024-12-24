@@ -1,1 +1,2 @@
-ABCDEF
+test file for clone
+
