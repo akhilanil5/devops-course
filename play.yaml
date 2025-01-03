@@ -1,0 +1,11 @@
+---
+ 
+ - hosts: localhost
+   name: play1
+   tasks: 
+      - name: Install Apache
+        apt: name=apache2 state=latest
+      - name: Install nginx
+        apt: name=nginx state=latest
+      - name: Adding Website
+        script: hello.sh

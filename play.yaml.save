@@ -1,0 +1,20 @@
+---
+- name: Example Playbook
+  hosts: web_servers
+  become: yes
+  tasks:
+    - name: Ensure Apache is installed
+      apt:
+        name: apache2
+        state: present
+      become: yes
+- name: Ensure Apache is running
+      service:
+       name: apache2
+       state: started
+      become: yes
+    - name: Create a directory
+      file:
+        path: /var/www/mywebsite
+        state: directory
+      become: yes
